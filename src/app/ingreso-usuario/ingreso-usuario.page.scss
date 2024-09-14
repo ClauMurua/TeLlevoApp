@@ -1,45 +1,91 @@
 ion-content {
-    --background: linear-gradient(135deg, #8f4bb7, #182848);
+  --background: linear-gradient(135deg, #8f4bb7, #182848);
   }
   
   #container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+  justify-content: center;
+    padding: 5vh 5vw;
     height: 100%;
-  }
-    
-  ion-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+  box-sizing: border-box;
+}
+
+ion-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+    max-width: 400px;
     text-align: center;
     padding: 20px;
   }
-  ion-item {
-    --background: transparent;
-    color: white;
-  }
-  ion-button {
-    --background: linear-gradient(135deg, #4facfe, #00f2fe);
-    --border-radius: 50px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
+
+ion-item {
+  --background: transparent;
+  color: white;
+  width: 100%;
+}
+
+ion-button {
+  --background: linear-gradient(135deg, #4facfe, #00f2fe);
+  --border-radius: 50px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+    max-width: 300px;
     margin-top: 15px;
     text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    ion-card {
-      height: auto;
+// Media queries para diferentes tamaños de pantalla
+@media (max-width: 768px) {
+  #container {
+      padding: 3vh 3vw;
     }
+    ion-card {
+    width: 95%;
+      padding: 15px;
+    }
+    
+    ion-button {
+      width: 90%;
+    }
+    }
+    
+    @media (max-width: 480px) {
+      #container {
+        padding: 2vh 2vw;
+      }
+    
+      ion-card {
+        width: 100%;
+        padding: 10px;
+      }
+    
+      ion-button {
+        width: 95%;
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      ion-card {
+        max-width: 500px;
+      }
+    
+      ion-button {
+        max-width: 350px;
+      }
+    }
+// Para pantallas muy altas (como algunos móviles en modo vertical)
+@media (min-height: 1000px) {
+  #container {
+    justify-content: flex-start;
+    padding-top: 10vh;
   }
-  
+}

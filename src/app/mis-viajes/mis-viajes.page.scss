@@ -1,9 +1,9 @@
 ion-content {
-    --background: linear-gradient(135deg, #4b6cb7, #182848);
+  --background: linear-gradient(135deg, #4b6cb7, #182848);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Para que el contenido esté centrado verticalmente */
+  height: 100vh;
   }
   
   #container {
@@ -13,11 +13,47 @@ ion-content {
     align-items: center;
     text-align: center;
     height: 100%;
-  }
-  
-  .coming-soon {
-    font-size: 3em;
+  width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.coming-soon {
+  font-size: 10vw; // Tamaño base fluido
     color: white;
     text-transform: uppercase;
+  margin: 0;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: font-size 0.3s ease;
   }
   
+  // Media queries para ajustar el tamaño de fuente en diferentes tamaños de pantalla
+  @media (min-width: 768px) {
+    .coming-soon {
+      font-size: 8vw;
+    }
+}
+@media (min-width: 1024px) {
+  .coming-soon {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .coming-soon {
+    font-size: 72px; // Tamaño máximo fijo para pantallas grandes
+  }
+}
+
+// Asegurarse de que el contenido no se desborde en pantallas muy pequeñas
+@media (max-height: 400px) {
+  #container {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  .coming-soon {
+    font-size: 8vw;
+  }
+}

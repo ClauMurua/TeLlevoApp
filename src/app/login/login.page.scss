@@ -64,3 +64,8 @@ ion-button[fill="clear"] {
     --background: transparent;
 }
 
+@media (max-width: 768px) {
+    ion-card {
+        height: auto;
+    }
+}
