@@ -1,0 +1,88 @@
+ion-content {
+  --background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.seccion-bienvenida {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.mensaje-bienvenida {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.action-question {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+ion-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar el contenido */
+  align-items: center; /* Centrar horizontalmente */
+  height: 250px; /* Ajusta este valor según tus necesidades */
+  text-align: center; /* Asegurar que el contenido esté centrado */
+}
+
+ion-card-title, ion-card-content {
+  color: white;
+}
+
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar el contenido */
+  height: 100%; /* Asegurar que el contenido ocupe todo el espacio de la tarjeta */
+}
+
+ion-button {
+  --background: linear-gradient(135deg, #4facfe, #00f2fe);
+  --border-radius: 50px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Ajustar el tamaño del botón para que no ocupe todo el ancho */
+  margin-top: auto;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  ion-card {
+    height: auto;
+  }
+}
+
+.logo-card {
+  max-width: 50vh; /* ajusta el ancho máximo de la tarjeta */
+  margin: 16px; /* agrega un margen para separar la tarjeta del contenido */
+  height: fit-content; 
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+ion-content {
+    --background: linear-gradient(135deg, #4b6cb7, #182848);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para que el contenido esté centrado verticalmente */
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .coming-soon {
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+  }
+  

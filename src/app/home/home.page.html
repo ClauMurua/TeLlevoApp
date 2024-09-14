@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+    <ion-card class="logo-card">
+        <ion-card-title class="ion-text-start">
+          <h1>TeLlevoAPP</h1>
+        </ion-card-title>
+      </ion-card>
+
+  <div id="container">
+    <div class="seccion-bienvenida">
+      <h2 class="mensaje-bienvenida">Bienvenido, {{username}}</h2>
+      <h3 class="action-question">¿Qué deseas hacer hoy?</h3>
+    </div>
+
+    <div class="cards-container">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Ofrecer un viaje</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          ¿Tienes un vehículo y quieres llevar a otros estudiantes?
+          <ion-button expand="block" (click)="ofrecerViaje()">PROGRAMAR VIAJE</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Buscar un viaje</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          ¿Necesitas transporte para volver a casa?
+          <ion-button expand="block" (click)="buscarViaje()">BUSCAR VIAJE DISPONIBLE</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Mis viajes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Revisa tus viajes programados o solicitudes pendientes.
+          <ion-button expand="block" (click)="verMisViajes()">VER MIS VIAJES</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
